@@ -72,7 +72,7 @@ function run_backup_instance() {
 	then
 		echo "Not really running. Only a test."
 	else
-		rsnapshot $runthis||echo "$0: rsnapshot could not run properly. Exiting..."||exit #remove 'echo' to make shit real
+		rsnapshot $runthis
 		[[ $? == 1 ]]&&dbgpr "rsnapshot could not run properly. Exiting..."&&exit #remove 'echo' to make shit real
 	fi
 }
